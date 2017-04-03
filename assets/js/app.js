@@ -1,5 +1,4 @@
 var select = document.getElementById("select");
-var imagen = document.getElementsByTagName("img");
 var cuarta = document.getElementsByClassName("chile4");
 var quinta = document.getElementsByClassName("lima5");
 var sexta = document.getElementsByClassName("lima6");
@@ -8,18 +7,14 @@ var sexta = document.getElementsByClassName("lima6");
 select.onchange = function(){
   if(select.value == "cuarta"){
     filtrar(cuarta,quinta,sexta);
-    console.log("xxx")
   }
   else if (select.value == "quinta"){
     filtrar(quinta,sexta,cuarta);
-    console.log("falta poco")
-      }
+        }
   else if (select.value == "sexta") {
     filtrar(sexta,quinta,cuarta);
-    console.log("ya casi")
-      }
+        }
   }
-
 
 function filtrar(a,b,c){
       for(var i=0;i<a.length;i++){
