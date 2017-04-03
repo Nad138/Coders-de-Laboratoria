@@ -1,49 +1,52 @@
 var select = document.getElementById("select");
 var imagen = document.getElementsByTagName("img");
-var cuarta = document.getElementsByClassName("4-chile");
-var quinta = document.getElementsByClassName("5-lima");
-var sexta = document.getElementsByClassName("6-lima");
+var cuarta = document.getElementsByClassName("chile4");
+var quinta = document.getElementsByClassName("lima5");
+var sexta = document.getElementsByClassName("lima6");
 
 
 select.onchange = function(){
   if(select.value == "cuarta"){
-    mostrar(cuarta,quinta,sexta);
-    ocultar(cuarta,quinta,sexta);
-        console.log("xxx")
+    filtrar(cuarta,quinta,sexta);
+    console.log("xxx")
   }
   else if (select.value == "quinta"){
-    mostrar(quinta,sexta,cuarta);
-    ocultar(cuarta,quinta,sexta);
+    filtrar(quinta,sexta,cuarta);
     console.log("falta poco")
       }
   else if (select.value == "sexta") {
-    mostrar(sexta,cuarta,quinta);
-    ocultar(cuarta,quinta,sexta);
-     console.log("ya casi")
+    filtrar(sexta,quinta,cuarta);
+    console.log("ya casi")
       }
   }
 
 
-function mostrar(a,b,c){
+function filtrar(a,b,c){
       for(var i=0;i<a.length;i++){
-          a[i].style.display="block-inline";
-          }
+        a[i].style.display = 'inline-block';
+        }
       for(var j=0;j<b.length;j++){
           b[j].style.display="none";
-          }
+        }
       for(var x=0;x<c.length;x++){
            c[x].style.display="none";
-          }
+         }
   };
 
-function ocultar(uno,dos,tres){
+/*function ocultar(uno){
     for(var a=0;a<uno.length;a++){
         var ver = uno[a].style.display;
-        if(ver=="block-inline"){
-          ver="none";
+        if(ver=="inline-block"){
+          ver=="none";
+          console.log("no")
             }
-        else{
-              ver="block-inline";
             }
-      }
-    };
+    };*/
+
+    /*function filtrar(imagen){
+    for(var i=0;i<imagen.length;i++){
+      imagen[i].classList.add("chile4");
+      imagen[i].classList.remove("lima5");
+      imagen[i].classList.remove("lima6");
+    }
+    }*/

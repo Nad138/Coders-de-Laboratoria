@@ -8,10 +8,26 @@ img{
   height: 300px;
   width: 300px;
   margin: 10px;
+  border-radius: 5px;
+  border-color: black;
+
 }
 div{
-  align: center;
+  text-align: center;
+}
+p{
+  text-align: center;
+  font-size: 30px;
 }
 #image-container{
-  aling: center;
+  text-align: center;
+}
+.lima5{
+  display: inline-block;
+}
+.lima6{
+  display: inline-block;
+}
+.chile4{
+  display: inline-block;
 }
